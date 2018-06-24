@@ -3,7 +3,7 @@ from django.http import HttpResponse #Se importa el objeto HttpResponse para pod
 # Create your views here.
 
 def home(request):
-    return HttpResponse('Página principal')
+    return render(request, 'continents/home.html')
 
 def continents(request):
-    return HttpResponse('Continentes del mundo')
+    return render(request, 'continents/continents.html')
