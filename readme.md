@@ -44,3 +44,5 @@ podemos usar otro procesador de contexto que nos da informacion del usuario y se
 para usarlos debemos crear un procesaro de contexto
 ### Herencia e inclusión
 Son dos formas de reutilizar nuestras plantillas y es usando extends e include con template tags, ésto nos va a ayudar a ahorrar tiempo reecribiendo maquetado de html.
+## Rutas
+Con Django podemos hacer varias cosas raras con las rutas, como por ejemplo hacer rutas dinamicas que nos permitan obtener una vista en detalle de un objeto en espesifico.
