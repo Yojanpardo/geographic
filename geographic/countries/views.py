@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from django.views.generic import TemplateView
 # Create your views here.
 
-def countries(request):
-    return HttpResponse('Paises del mundo')
+class Countries(TemplateView):
+    template_name='countries/countries.html'
