@@ -37,3 +37,8 @@ utiliza una sintaxis que nos permite convertir nuestros archivos estaticos de ht
 ### Template tags y template filters
 nos permiten interactuar en nuestros templates. existen muchos tags que nos sirven para hacer diferentes cosas en nuestras plantillas, puedes encontrar mas información en la [documentación](https://docs.djangoproject.com/es/2.0/topics/templates/) de Django.
 Es recomendable que toda la información sea procesada en el controlador y solo se muestre en la vista, no es recomendable que se procese informacion en las vistas.
+### Context procesors
+nos sirven por ejemplo para identificar al usuario que está utilizando la aplicación.
+En ocaciones tenemos codigo que se repite muchas veces, para simplificar vamos a crear un context procesor que contenga la data que se repite, para poder utilizarlo entonces creamos un archivo que se llame context_processor.py en el cual declaramos una función, recibe request como parametro y retornamos la información, dentro de los settigns ponemos el nuevo procesador de contexto y listo.
+podemos usar otro procesador de contexto que nos da informacion del usuario y se utiliza dentro del template con {{request.user}}
+para usarlos debemos crear un procesaro de contexto
