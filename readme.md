@@ -34,3 +34,6 @@ Con las class based view podemos utilizar un crud que nos permite crear, actuali
 
 ## Templates o plantillas
 utiliza una sintaxis que nos permite convertir nuestros archivos estaticos de html en algo más dinámico. Maneja una sintaxis especial que nos permite hacer ciclos y condiciones, tambien nos permite reutilizar templates para no tener que escribir bloques de cógigo que se repiten, como por ejemplo los fotters.
+### Template tags y template filters
+nos permiten interactuar en nuestros templates. existen muchos tags que nos sirven para hacer diferentes cosas en nuestras plantillas, puedes encontrar mas información en la [documentación](https://docs.djangoproject.com/es/2.0/topics/templates/) de Django.
+Es recomendable que toda la información sea procesada en el controlador y solo se muestre en la vista, no es recomendable que se procese informacion en las vistas.
