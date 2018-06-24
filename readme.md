@@ -42,3 +42,5 @@ nos sirven por ejemplo para identificar al usuario que está utilizando la aplic
 En ocaciones tenemos codigo que se repite muchas veces, para simplificar vamos a crear un context procesor que contenga la data que se repite, para poder utilizarlo entonces creamos un archivo que se llame context_processor.py en el cual declaramos una función, recibe request como parametro y retornamos la información, dentro de los settigns ponemos el nuevo procesador de contexto y listo.
 podemos usar otro procesador de contexto que nos da informacion del usuario y se utiliza dentro del template con {{request.user}}
 para usarlos debemos crear un procesaro de contexto
+### Herencia e inclusión
+Son dos formas de reutilizar nuestras plantillas y es usando extends e include con template tags, ésto nos va a ayudar a ahorrar tiempo reecribiendo maquetado de html.
