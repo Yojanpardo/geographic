@@ -31,3 +31,6 @@ Con las class based view podemos utilizar un crud que nos permite crear, actuali
   * Deleteview
 
  Más adelante veremos como funcionan ya que necesitamos tener nuestros modelos creados.
+
+## Templates o plantillas
+utiliza una sintaxis que nos permite convertir nuestros archivos estaticos de html en algo más dinámico. Maneja una sintaxis especial que nos permite hacer ciclos y condiciones, tambien nos permite reutilizar templates para no tener que escribir bloques de cógigo que se repiten, como por ejemplo los fotters.

@@ -2,4 +2,7 @@
 {% block title %}Countries{% endblock %}
 {% block content %}
 <h1>Paises del mundo</h1>
+{% for country in countries %}
+  <p>{{ country }}</p>
+{% endfor %}
 {% endblock %}

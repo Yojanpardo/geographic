@@ -2,4 +2,7 @@
 {% block title %}Continents{% endblock %}
 {% block content %}
 <h1>Continentes del mundo</h1>
+{% for continent in continents %}
+  <p>{{ continent.name }}, {{continent.description|title}}</p>
+{% endfor %}
 {% endblock %}
