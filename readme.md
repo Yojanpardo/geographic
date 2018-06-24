@@ -24,3 +24,10 @@ Dependiendo de lo que necesitemos que haga nuestra vista podemos darle diferente
 
 ## Class based view
 Es una clase que hereda de View, nos permite usar dispatch, get y post. nos permite manejar herencia, mixings, tener el codigo mas organizado y tener comportamiento por defecto.
+Con las class based view podemos utilizar un crud que nos permite crear, actualizar, listar y eliminar modelos por medio de un formulario utilizando las siguientes CBV por defecto:
+  * Createview
+  * updateview
+  * Listview
+  * Deleteview
+
+ Más adelante veremos como funcionan ya que necesitamos tener nuestros modelos creados.
