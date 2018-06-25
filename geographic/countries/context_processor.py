@@ -8,4 +8,12 @@ def get_context_data(request):
     dinamarca = {'name': 'Dinamarca', 'code':'DIN', 'description':'Iguanas verdes de Dinamarca'}
     estocolmo = {'name': 'Estocolmo', 'code':'EST', 'description':'No sé nada de este país'}
     countries = [afganistan,argentina,brasil,chile,colombia,dember,dinamarca,estocolmo]
-    return {'countries':countries}
+
+    africa = {'name':'África','description':'Hot', 'code_id':0}
+    antartida = {'name':'Antártida', 'description':'Cold', 'code_id':1}
+    america = {'name':'América','description':'new world', 'code_id':2}
+    asia = {'name':'Asia','description':'Chinos', 'code_id':3}
+    europa = {'name':'Europa','description':'conquers', 'code_id':4}
+    oseania = {'name':'Oseania','description':'kangaroos', 'code_id':5}
+    continents=[africa,antartida,america,asia,europa,oseania]
+    return {'continents':continents,'countries':countries}

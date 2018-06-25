@@ -1,0 +1,13 @@
+{% extends "continents/base.html" %}
+{% block title %}{{code_id}}{% endblock %}
+{% block content %}
+{% for continent in continents %}
+  {% if continent.code_id == code_id %}
+    <h1>{{ continent.name }}</h1>
+    <p><strong>code_id:</strong>{{ continent.code_id }}</p>
+    <h4>Descripción:</h4>
+    <p>{{ continent.description }}</p>
+  {% endif %}
+{% endfor %}
+<a href="/continents/">atrás</a>
+{% endblock %}

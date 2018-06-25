@@ -7,15 +7,11 @@ def home(request):
     return render(request, 'continents/home.html')
 
 class Continents(TemplateView):
-
     template_name='continents/continents.html'
 
+class ContinentDetailView(TemplateView):
+    template_name = 'continents/continent_detail.html'
+
     def get_context_data(self, *args, **kwargs):
-        africa = {'name':'África','description':'Hot'}
-        antartida = {'name':'Antártida', 'description':'Cold'}
-        america = {'name':'América','description':'new world'}
-        asia = {'name':'Asia','description':'Chinos'}
-        europa = {'name':'Europa','description':'conquers'}
-        oseania = {'name':'Oseania','description':'kangaroos'}
-        continents=[africa,antartida,america,asia,europa,oseania]
-        return {'continents':continents}
+        code_id = kwargs['code_id']
+        return {'code_id':code_id}

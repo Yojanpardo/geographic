@@ -1,7 +1,7 @@
 {% extends "continents/base.html" %}
 {% block title %}{{code}}{% endblock %}
 {% block content %}
-{{code}}
+
 {% for country in countries %}
   {% if country.code == code %}
     <h1>{{ country.name }}</h1>
