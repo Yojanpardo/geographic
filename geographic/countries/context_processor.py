@@ -1,12 +1,31 @@
+from django.urls import reverse
 def get_context_data(request):
-    afganistan = {'name': 'Afganistán', 'code':'AFG', 'description':'Un pais que vive en guerra'}
-    argentina = {'name': 'Argentina', 'code':'ARG', 'description':'Narizones que se creen Europeos'}
-    brasil = {'name': 'Brasil', 'code':'BRA', 'description':'Gentesiña hablando rariño'}
-    chile = {'name': 'Chile', 'code':'CHI', 'description':'No lo sé, no tengo queja de Chile xdxd'}
-    colombia = {'name': 'Colombia', 'code':'CO', 'description':'El país donde los niños se mueren de hambre y la peor plaga de la historia se roba la plata de todos los colombianos'}
-    dember = {'name': 'Dember', 'code':'DEM', 'description':'Solo sé que es el alias de un personaje de la casa de papel'}
-    dinamarca = {'name': 'Dinamarca', 'code':'DIN', 'description':'Iguanas verdes de Dinamarca'}
-    estocolmo = {'name': 'Estocolmo', 'code':'EST', 'description':'No sé nada de este país'}
+    afganistan = {
+        'name': 'Afganistán', 'code':'AFG', 'description':'Un pais que vive en guerra',
+        'detail_url': reverse('country_detail', kwargs={'code': 'AFG'})
+    }
+    argentina = {
+        'name': 'Argentina', 'code':'ARG', 'description':'Narizones que se creen Europeos',
+        'detail_url': reverse('country_detail', kwargs={'code': 'ARG'})
+    }
+    brasil = {'name': 'Brasil', 'code':'BRA', 'description':'Gentesiña hablando rariño',
+    'detail_url': reverse('country_detail', kwargs={'code': 'BRA'})
+    }
+    chile = {'name': 'Chile', 'code':'CHI', 'description':'No lo sé, no tengo queja de Chile xdxd',
+    'detail_url': reverse('country_detail', kwargs={'code': 'CHI'})
+    }
+    colombia = {'name': 'Colombia', 'code':'CO', 'description':'El país donde los niños se mueren de hambre y la peor plaga de la historia se roba la plata de todos los colombianos',
+    'detail_url': reverse('country_detail', kwargs={'code': 'CO'})
+    }
+    dember = {'name': 'Dember', 'code':'DEM', 'description':'Solo sé que es el alias de un personaje de la casa de papel',
+    'detail_url': reverse('country_detail', kwargs={'code': 'DEM'})
+    }
+    dinamarca = {'name': 'Dinamarca', 'code':'DIN', 'description':'Iguanas verdes de Dinamarca',
+    'detail_url': reverse('country_detail', kwargs={'code': 'DIN'})
+    }
+    estocolmo = {'name': 'Estocolmo', 'code':'EST', 'description':'No sé nada de este país',
+    'detail_url': reverse('country_detail', kwargs={'code': 'EST'})
+    }
     countries = [afganistan,argentina,brasil,chile,colombia,dember,dinamarca,estocolmo]
 
     africa = {'name':'África','description':'Hot', 'code_id':0}

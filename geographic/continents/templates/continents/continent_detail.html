@@ -7,7 +7,8 @@
     <p><strong>code_id:</strong>{{ continent.code_id }}</p>
     <h4>Descripción:</h4>
     <p>{{ continent.description }}</p>
+    {% lorem 3 p%}
   {% endif %}
 {% endfor %}
-<a href="/continents/">atrás</a>
+<a href="{% url "continents" %}">atrás</a>
 {% endblock %}

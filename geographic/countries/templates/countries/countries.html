@@ -3,7 +3,7 @@
 {% block content %}
 <h1>Paises del mundo</h1>
 {% for country in countries %}
-<a href="/countries/{{country.code}}">
+<a href="{{country.detail_url}}">
   <div style="border-width: 2px; border-color: #000000; border-style: dotted;">
     <h2>{{ country.name }}</h2>
     <p><strong>Code: </strong>{{country.code}}</p>

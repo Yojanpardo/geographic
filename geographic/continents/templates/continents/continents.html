@@ -3,11 +3,12 @@
 {% block content %}
 <h1>Continentes del mundo</h1>
 {% for continent in continents %}
-<a href="/continents/{{continent.code_id}}">
+<a href="{% url "continent_detail" code_id=continent.code_id %}">
   <div style="border-width: 2px; border-color: #000000; border-style: dotted;">
     <h1>{{ continent.name }}</h1>
     <p>Continent id: {{continent.code_id}}</p>
   </div>
+  <br>
 </a>
 {% endfor %}
 {% endblock %}

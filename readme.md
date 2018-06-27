@@ -45,4 +45,8 @@ para usarlos debemos crear un procesaro de contexto
 ### Herencia e inclusión
 Son dos formas de reutilizar nuestras plantillas y es usando extends e include con template tags, ésto nos va a ayudar a ahorrar tiempo reecribiendo maquetado de html.
 ## Rutas
-Con Django podemos hacer varias cosas raras con las rutas, como por ejemplo hacer rutas dinamicas que nos permitan obtener una vista en detalle de un objeto en espesifico.
+Con Django podemos hacer varias cosas raras con las rutas, como por ejemplo hacer rutas dinamicas que nos permitan obtener una vista en detalle de un objeto en espesifico. también existen diversas formas de declarar rutas en nuestra aplicación.
+a cada ruta que creamos le podemos dar un nombre el cual podermos utilizar para hacer nuestro codigo mas facil de versionar y organizar.
+entro de los templates debemos utilizar el tag {% url %} para poder acceder a las vistas en lugar de estar escribiendo la ruta en cada plantilla.
+### Name, reverse
+Name es un atributo que se asigna en las urls y nos permite nombrar una ruta de una forma especifica para poder llamarla más adelante, reverse nos permite asignar rutas de cada objeto almacenandola directamente en el mismo.

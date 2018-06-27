@@ -8,7 +8,8 @@
     <p><strong>Code:</strong>{{ country.code }}</p>
     <h4>Descripción:</h4>
     <p>{{ country.description }}</p>
+    {% lorem 5 p %}
   {% endif %}
 {% endfor %}
-<a href="/countries/">atrás</a>
+<a href="{% url "countries" %}">atrás</a>
 {% endblock %}
