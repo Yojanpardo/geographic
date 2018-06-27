@@ -50,3 +50,5 @@ a cada ruta que creamos le podemos dar un nombre el cual podermos utilizar para 
 entro de los templates debemos utilizar el tag {% url %} para poder acceder a las vistas en lugar de estar escribiendo la ruta en cada plantilla.
 ### Name, reverse
 Name es un atributo que se asigna en las urls y nos permite nombrar una ruta de una forma especifica para poder llamarla más adelante, reverse nos permite asignar rutas de cada objeto almacenandola directamente en el mismo.
+### Include y namespaces
+nos permite incluir las rutas de otras aplicaciones para poder hacer cada aplicacion mas independiente y los namespaces son como preposiciones para cada una de las clases de nuestras aplicaciones, con esto podemos evitar colisiones de rutas.
