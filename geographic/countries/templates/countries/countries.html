@@ -3,9 +3,9 @@
 {% block content %}
 <h1>Paises del mundo</h1>
 {% for country in countries %}
-<a href="{{country.detail_url}}">
+<a href="{% url "countries:country_detail" country.code %}">
   <div style="border-width: 2px; border-color: #000000; border-style: dotted;">
-    <h2>{{ country.name }}</h2>
+    <h2>{{ country.name | title}}</h2>
     <p><strong>Code: </strong>{{country.code}}</p>
   </div>
 </a>

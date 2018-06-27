@@ -52,7 +52,8 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'countries.context_processor.get_context_data'
+                'countries.context_processor.countries_data',
+                'countries.context_processor.continents_data',
             ],
         },
     },

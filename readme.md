@@ -52,3 +52,7 @@ entro de los templates debemos utilizar el tag {% url %} para poder acceder a la
 Name es un atributo que se asigna en las urls y nos permite nombrar una ruta de una forma especifica para poder llamarla más adelante, reverse nos permite asignar rutas de cada objeto almacenandola directamente en el mismo.
 ### Include y namespaces
 nos permite incluir las rutas de otras aplicaciones para poder hacer cada aplicacion mas independiente y los namespaces son como preposiciones para cada una de las clases de nuestras aplicaciones, con esto podemos evitar colisiones de rutas.
+## Modelos
+son la capa intermedia entre la aplicacion y la base de datos. se tranforman en tablas en nuestra base de datos, es una fuente unica de informacion y con los campos adecuados podemos manipular la información.
+### shell
+con ./manage.py shell accedemos a una consola interactiva que nos permite modificar la base de datos directamente desde la cosola
