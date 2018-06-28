@@ -13,4 +13,9 @@ class Country(models.Model):
     code = models.CharField(max_length=3)
     description = models.TextField(max_length=255)
     classification = models.CharField(max_length=1,choices=CLASSIFICATION,default='C')
-    
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        ordering = ('id',)
