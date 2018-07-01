@@ -2,6 +2,9 @@
 {% block content %}
 <h1>Geographic</h1>
 <p>Bienvenido a mi genial aplicación creada gracias a la ayuda de platzi y el profesor David Toca</p>
-<a href="{% url "continents:home" %}">Clic aquí para ver los continentes</a>
-<a href="{% url "countries:home" %}">Clic aquí para ver los paises</a>
+<p><a href="{% url "continents:home" %}">Clic aquí para ver los continentes</a></p>
+<p><a href="{% url "countries:home" %}">Clic aquí para ver los paises</a></p>
+<p><a href="{% url "people:home" %}">Personas registradas</a></p>
+<p> <a href="{% url "capitals:home" %}">Capitales</a></p>
+<p><a href="/admin/">admin</a>
 {% endblock %}

@@ -27,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'continents.apps.ContinentsConfig',
     'countries.apps.CountriesConfig',
+    'people.apps.PeopleConfig',
+    'capitals.apps.CapitalsConfig',
 ]
 
 MIDDLEWARE = [
@@ -54,6 +56,8 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'countries.context_processor.countries_data',
                 'countries.context_processor.continents_data',
+                'countries.context_processor.people_data',
+                'countries.context_processor.capitals_data',
             ],
         },
     },

@@ -1,6 +1,8 @@
 from django.urls import reverse
 from .models import Country
-
+from continents.models import Continent
+from people.models import Person
+from capitals.models import Capital
 def countries_data(request):
     countries = Country.objects.all()
 #    afganistan = {
@@ -36,13 +38,22 @@ def countries_data(request):
 
 def continents_data(request):
 
-    africa = {'name':'África','description':'Hot', 'code_id':0}
-    antartida = {'name':'Antártida', 'description':'Cold', 'code_id':1}
-    america = {'name':'América','description':'new world', 'code_id':2}
-    asia = {'name':'Asia','description':'Chinos', 'code_id':3}
-    europa = {'name':'Europa','description':'conquers', 'code_id':4}
-    oseania = {'name':'Oseania','description':'kangaroos', 'code_id':5}
-
-    continents=[africa,antartida,america,asia,europa,oseania]
-
+    continents = Continent.objects.all()
+#    africa = {'name':'África','description':'Hot', 'code_id':0}
+#    antartida = {'name':'Antártida', 'description':'Cold', 'code_id':1}
+#    america = {'name':'América','description':'new world', 'code_id':2}
+#    asia = {'name':'Asia','description':'Chinos', 'code_id':3}
+#    europa = {'name':'Europa','description':'conquers', 'code_id':4}
+#    oseania = {'name':'Oseania','description':'kangaroos', 'code_id':5}
+#
+#    continents=[africa,antartida,america,asia,europa,oseania]
     return {'continents':continents}
+
+def people_data(request):
+    people = Person.objects.all()
+
+    return {'people':people}
+
+def capitals_data(request):
+    capitals = Capital.objects.all()
+    return {'capitals':capitals}

@@ -1,0 +1,11 @@
+{% extends 'continents/base.html' %}
+{% block title %}Capitals{% endblock %}
+{% block content %}
+<div style="">
+  {% for capital in capitals %}
+    <h3>Nombre</h3>
+    <p>{{capital.name}}</p>
+    <p>capital de: {{capital.country}}</p>
+  {% endfor %}
+</div>
+{% endblock %}

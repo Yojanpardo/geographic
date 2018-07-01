@@ -7,4 +7,6 @@ urlpatterns = [
     path('', home, name='home'),
     path('continents/',include('continents.urls',namespace='continents')),
     path('countries/',include('countries.urls',namespace='countries')),
+    path('people/',include('people.urls',namespace='people')),
+    path('capitals/',include('capitals.urls',namespace='capitals')),
 ]
