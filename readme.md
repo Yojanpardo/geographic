@@ -56,3 +56,5 @@ nos permite incluir las rutas de otras aplicaciones para poder hacer cada aplica
 son la capa intermedia entre la aplicacion y la base de datos. se tranforman en tablas en nuestra base de datos, es una fuente unica de informacion y con los campos adecuados podemos manipular la información.
 ### shell
 con ./manage.py shell accedemos a una consola interactiva que nos permite modificar la base de datos directamente desde la cosola
+### Relaciones entre modelos
+Va a ser necesario durante la creacion de nuestros proyectos generar relaciones entre los diferentes modelos. para ello utilizamos unos campor especiales en django que nos permiten generar relaciones de uno a uno, uno a muchos o muchos a muchos. [aqui pueden encontrar toda la documentacion.](https://docs.djangoproject.com/en/2.0/topics/db/examples/)

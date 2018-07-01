@@ -5,5 +5,5 @@ from .models import Country
 
 @admin.register(Country)
 class AdminCountry(admin.ModelAdmin):
-    list_display=('name','code','description','classification',)
+    list_display=('name','code','continent','classification',)
     list_filter=('classification',)
