@@ -2,16 +2,22 @@
 {% block title %}People{% endblock %}
 {% block content %}
 <h1>People</h1>
+
 {% for person in people %}
-  <h3>nombre</h3>
-  <p>{{person.name}}</p>
-  <h3>apellido</h3>
-  <p>{{person.last_name}}</p>
-  <h3>Teléfono</h3>
-  <p>{{person.phone_number}}</p>
-  <h3>Nacionalidad/es</h3>
-  {% for nationality in person.nationalities.all %}
-    <p>{{nationality}}</p>
-  {% endfor %}
+  <div style="border-style:dotted;border-width:1px;border-width:2px;">
+    {% if person.is_active %}
+      <h3>nombre</h3>
+      <p>{{person.name}}</p>
+      <h3>apellido</h3>
+      <p>{{person.last_name}}</p>
+      <h3>Teléfono</h3>
+      <p>{{person.phone_number}}</p>
+      <h3>Nacionalidad/es</h3>
+      {% for nationality in person.nationalities.all %}
+        <p>{{nationality}}</p>
+      {% endfor %}
+    {% endif %}
+  </div>
+  <br>
 {% endfor %}
 {% endblock %}

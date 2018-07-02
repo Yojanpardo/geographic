@@ -76,3 +76,6 @@ nos permite hacer una busqueda de forma mas eficiente.
 
 ### ordering
 al ejecutar una consulta se puede ordenar por algun atributo utilizando el order_by
+
+### Administradores personalizados
+hasta el momento solo parece que sirven para 'eliminar cosas'

@@ -3,7 +3,7 @@
 {% block content %}
 <h1>Continentes del mundo</h1>
 {% for continent in object_list %}
-<a href="{% url "continents:continent_detail" pk=continent.id %}">
+<a href="{% url "continents:continent_detail" pk=continent.id %}" style="color:{{continent.color}};text-decoration:none;">
   <div style="border-width: 2px; border-color: #000000; border-style: dotted;">
     <h1>{{ continent.name }}</h1>
     <p>Continent id: {{continent.id}}</p>

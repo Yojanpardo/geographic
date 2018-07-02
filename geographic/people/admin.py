@@ -4,4 +4,5 @@ from .models import Person
 
 @admin.register(Person)
 class AdminPerson(admin.ModelAdmin):
-    list_display=('name','last_name','phone_number',)
+    list_display=('name','last_name','phone_number','is_active',)
+    list_filter=('is_active',)
