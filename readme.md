@@ -34,27 +34,39 @@ Con las class based view podemos utilizar un crud que nos permite crear, actuali
 
 ## Templates o plantillas
 utiliza una sintaxis que nos permite convertir nuestros archivos estaticos de html en algo más dinámico. Maneja una sintaxis especial que nos permite hacer ciclos y condiciones, tambien nos permite reutilizar templates para no tener que escribir bloques de cógigo que se repiten, como por ejemplo los fotters.
+
 ### Template tags y template filters
 nos permiten interactuar en nuestros templates. existen muchos tags que nos sirven para hacer diferentes cosas en nuestras plantillas, puedes encontrar mas información en la [documentación](https://docs.djangoproject.com/es/2.0/topics/templates/) de Django.
 Es recomendable que toda la información sea procesada en el controlador y solo se muestre en la vista, no es recomendable que se procese informacion en las vistas.
+
 ### Context procesors
 nos sirven por ejemplo para identificar al usuario que está utilizando la aplicación.
 En ocaciones tenemos codigo que se repite muchas veces, para simplificar vamos a crear un context procesor que contenga la data que se repite, para poder utilizarlo entonces creamos un archivo que se llame context_processor.py en el cual declaramos una función, recibe request como parametro y retornamos la información, dentro de los settigns ponemos el nuevo procesador de contexto y listo.
 podemos usar otro procesador de contexto que nos da informacion del usuario y se utiliza dentro del template con {{request.user}}
 para usarlos debemos crear un procesaro de contexto
+
 ### Herencia e inclusión
 Son dos formas de reutilizar nuestras plantillas y es usando extends e include con template tags, ésto nos va a ayudar a ahorrar tiempo reecribiendo maquetado de html.
+
 ## Rutas
 Con Django podemos hacer varias cosas raras con las rutas, como por ejemplo hacer rutas dinamicas que nos permitan obtener una vista en detalle de un objeto en espesifico. también existen diversas formas de declarar rutas en nuestra aplicación.
 a cada ruta que creamos le podemos dar un nombre el cual podermos utilizar para hacer nuestro codigo mas facil de versionar y organizar.
 entro de los templates debemos utilizar el tag {% url %} para poder acceder a las vistas en lugar de estar escribiendo la ruta en cada plantilla.
+
 ### Name, reverse
 Name es un atributo que se asigna en las urls y nos permite nombrar una ruta de una forma especifica para poder llamarla más adelante, reverse nos permite asignar rutas de cada objeto almacenandola directamente en el mismo.
+
 ### Include y namespaces
 nos permite incluir las rutas de otras aplicaciones para poder hacer cada aplicacion mas independiente y los namespaces son como preposiciones para cada una de las clases de nuestras aplicaciones, con esto podemos evitar colisiones de rutas.
+
 ## Modelos
 son la capa intermedia entre la aplicacion y la base de datos. se tranforman en tablas en nuestra base de datos, es una fuente unica de informacion y con los campos adecuados podemos manipular la información.
+
 ### shell
 con ./manage.py shell accedemos a una consola interactiva que nos permite modificar la base de datos directamente desde la cosola
+
 ### Relaciones entre modelos
 Va a ser necesario durante la creacion de nuestros proyectos generar relaciones entre los diferentes modelos. para ello utilizamos unos campor especiales en django que nos permiten generar relaciones de uno a uno, uno a muchos o muchos a muchos. [aqui pueden encontrar toda la documentacion.](https://docs.djangoproject.com/en/2.0/topics/db/examples/)
+
+### ListView y filtros
+Podemos generar un listado de objetos utilizando el ListView y asi nos ahorramos todo el trabajo hecho con el context procesor y esas maricadas, existen filtros que nos ayudarán a ejecutar busquedas avanzadas y que por supuesto están en [documentacion de django](https://docs.djangoproject.com/en/2.0/topics/db/queries/)

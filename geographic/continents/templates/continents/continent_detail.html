@@ -1,10 +1,10 @@
 {% extends "continents/base.html" %}
-{% block title %}{{code_id}}{% endblock %}
+  {% block title %}{% for continent in continents %}{% if continent.id == id %}{{continent.name}}{% endif %}{% endfor %}{% endblock %}
 {% block content %}
 {% for continent in continents %}
-  {% if continent.code_id == code_id %}
+  {% if continent.id == id %}
     <h1>{{ continent.name }}</h1>
-    <p><strong>code_id:</strong>{{ continent.code_id }}</p>
+    <p><strong>id:</strong>{{ continent.id }}</p>
     <h4>Descripción:</h4>
     <p>{{ continent.description }}</p>
     {% lorem 3 p%}

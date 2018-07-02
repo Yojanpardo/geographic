@@ -1,0 +1,14 @@
+{% extends 'continents/base.html' %}
+{% block title %}Search Country{% endblock %}
+{% block content %}
+<h1>Resultados de la busqueda</h1>
+  {% for country in object_list %}
+    <a href="{% url "countries:country_detail" country.code %}">
+      <div style="border-width: 2px; border-color: #000000; border-style: dotted;">
+        <h3>{{country.name}}</h3>
+        <p>{{country.code}}</p>
+      </div>
+    </a>
+    <br>
+  {% endfor %}
+{% endblock %}

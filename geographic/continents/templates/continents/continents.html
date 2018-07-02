@@ -2,11 +2,11 @@
 {% block title %}Continents{% endblock %}
 {% block content %}
 <h1>Continentes del mundo</h1>
-{% for continent in continents %}
-<a href="{% url "continents:continent_detail" code_id=continent.code_id %}">
+{% for continent in object_list %}
+<a href="{% url "continents:continent_detail" id=continent.id %}">
   <div style="border-width: 2px; border-color: #000000; border-style: dotted;">
     <h1>{{ continent.name }}</h1>
-    <p>Continent id: {{continent.code_id}}</p>
+    <p>Continent id: {{continent.id}}</p>
   </div>
   <br>
 </a>
