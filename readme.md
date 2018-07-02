@@ -70,3 +70,9 @@ Va a ser necesario durante la creacion de nuestros proyectos generar relaciones 
 
 ### ListView y filtros
 Podemos generar un listado de objetos utilizando el ListView y asi nos ahorramos todo el trabajo hecho con el context procesor y esas maricadas, existen filtros que nos ayudarán a ejecutar busquedas avanzadas y que por supuesto están en [documentacion de django](https://docs.djangoproject.com/en/2.0/topics/db/queries/)
+
+### get
+nos permite hacer una busqueda de forma mas eficiente.
+
+### ordering
+al ejecutar una consulta se puede ordenar por algun atributo utilizando el order_by

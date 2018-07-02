@@ -1,14 +1,10 @@
 {% extends "continents/base.html" %}
-  {% block title %}{% for continent in continents %}{% if continent.id == id %}{{continent.name}}{% endif %}{% endfor %}{% endblock %}
+  {% block title %}{{continent.name}}{% endblock %}
 {% block content %}
-{% for continent in continents %}
-  {% if continent.id == id %}
-    <h1>{{ continent.name }}</h1>
-    <p><strong>id:</strong>{{ continent.id }}</p>
-    <h4>Descripción:</h4>
-    <p>{{ continent.description }}</p>
-    {% lorem 3 p%}
-  {% endif %}
-{% endfor %}
+  <h1>{{ continent.name }}</h1>
+  <p><strong>id:</strong>{{ continent.id }}</p>
+  <h4>Descripción:</h4>
+  <p>{{ continent.description }}</p>
+  {% lorem 3 p%}
 <a href="{% url "continents:home" %}">atrás</a>
 {% endblock %}
