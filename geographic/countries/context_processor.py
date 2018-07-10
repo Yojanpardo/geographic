@@ -3,6 +3,7 @@ from .models import Country
 from continents.models import Continent
 from people.models import Person
 from capitals.models import Capital
+
 def countries_data(request):
     countries = Country.objects.all()
 #    afganistan = {
