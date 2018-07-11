@@ -22,3 +22,17 @@ class ContinentDetailView(DetailView):
 #        continent = get_object_or_404(Continent, id=kwargs['id'])
 #
 #        return {'continent':continent}
+
+def register_continent(request):
+    form = RegisterContinentForm(request.POST or None)
+
+    if form.is_valid():
+        continent = form.save()
+        return JsonResponse(
+            {
+                'name':continent.name,
+                'color':continent.color,
+                'population':continent.population
+            }
+        )
+    return render(request, 'continents/register_continent.html',{'form':form})
