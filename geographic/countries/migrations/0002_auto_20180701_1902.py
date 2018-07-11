@@ -3,14 +3,14 @@
 from django.db import migrations, models
 import django.db.models.deletion
 
-def create_continent(apps,schema_editor):
-    Continent = apps.get_model('continents', 'Continent')
-    Continent.objects.create(name='Asia', population=1365486654, color='#EE65EE')
-    Continent.objects.create(name='Antartida', population=55863, color='#000000')
-    Continent.objects.create(name='America', population=2680146, color='#ffff00')
-    Continent.objects.create(name='Oseania', population=7893258, color='#ee65dd')
-    Continent.objects.create(name='Europa', population=23654897, color='#f04261')
-    Continent.objects.create(name='Africa', population=130230, color='#f1d142')
+#def create_continent(apps,schema_editor):
+#    Continent = apps.get_model('continents', 'Continent')
+#    Continent.objects.create(name='Asia', population=1365486654, color='#EE65EE')
+#    Continent.objects.create(name='Antartida', population=55863, color='#000000')
+#    Continent.objects.create(name='America', population=2680146, color='#ffff00')
+#    Continent.objects.create(name='Oseania', population=7893258, color='#ee65dd')
+#    Continent.objects.create(name='Europa', population=23654897, color='#f04261')
+#    Continent.objects.create(name='Africa', population=130230, color='#f1d142')
 
 class Migration(migrations.Migration):
 
@@ -20,7 +20,7 @@ class Migration(migrations.Migration):
     ]
 
     operations = [
-        migrations.RunPython(create_continent),
+#        migrations.RunPython(create_continent),
         migrations.AlterModelOptions(
             name='country',
             options={'ordering': ('id',)},

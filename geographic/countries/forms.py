@@ -9,3 +9,8 @@ class RegisterCountryForm(forms.Form):
     description = forms.CharField(max_length=255,label='Description')
     classification = forms.ChoiceField(choices=Country().CLASSIFICATION,label='classification')
     continent = forms.ModelChoiceField(queryset=continents,label='continent')
+
+class RegisterModelCountryForm(forms.ModelForm):
+    class Meta:
+        model = Country
+        fields = ['name','code','description','classification','continent']

@@ -4,6 +4,7 @@ from django.views.generic import TemplateView
 from django.views.generic.list import ListView
 from .models import Continent
 from django.views.generic.detail import DetailView
+from .forms import RegisterContinentForm
 
 # Create your views here.
 

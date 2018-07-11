@@ -3,7 +3,7 @@ from django.http import HttpResponse, JsonResponse
 from django.views.generic import TemplateView
 from django.views.generic.list import ListView
 from .models import Country
-from .forms import RegisterCountryForm
+from .forms import RegisterModelCountryForm
 
 # Create your views here.
 
@@ -26,7 +26,15 @@ class SearchCountry(ListView):
         return Country.objects.filter(name__contains=query)
 
 def register_country(request):
-    form = RegisterCountryForm()
-    if request.method=='GET':
-        return render(request, 'countries/register_country.html',{'form':form})
-    return JsonResponse(request.POST)
+    form = RegisterModelCountryForm(request.POST or None)
+
+    if form.is_valid():
+        country = form.save()
+        return JsonResponse(
+            {
+                'name':country.name,
+                'code':country.code,
+                'classification':country.classification
+            }
+        )
+    return render(request, 'countries/register_country.html',{'form':form})
