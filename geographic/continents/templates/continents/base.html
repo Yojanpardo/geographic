@@ -3,10 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>{% block title %}Geographic{% endblock %}</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
   </head>
   <body>
-    <a href="/"><h1>Geographic</h1></a>
-      {% block content %}
-      {% endblock %}
+    <div class="container">
+      <div class="row">
+        <a href="/"><h1>Geographic</h1></a>
+          {% block content %}
+          {% endblock %}
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.js" integrity="sha256-slogkvB1K3VOkzAI8QITxV3VzpOnkeNVsKvtkYLMjfk=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $('select').material_select();
+      $('.datepicker').pickadate({
+        selectMonths: true,
+        selectYear: 15,
+        format: 'yyyy-mm-dd',
+        closeOnSelect: true
+      });
+    });
+    </script>
   </body>
 </html>

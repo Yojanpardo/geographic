@@ -5,4 +5,4 @@ from django.db import models
 class Capital(models.Model):
     name = models.CharField(max_length=30)
     description = models.TextField(null=True)
-    country = models.OneToOneField('countries.Country',on_delete=models.CASCADE)
+    country = models.OneToOneField('countries.Country',on_delete=models.CASCADE,related_name='city')

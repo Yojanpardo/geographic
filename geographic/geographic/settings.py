@@ -29,7 +29,9 @@ INSTALLED_APPS = [
     'countries.apps.CountriesConfig',
     'people.apps.PeopleConfig',
     'capitals.apps.CapitalsConfig',
-    'colorful'
+    'colorful',
+    'bootstrap_datepicker',
+    'bootstrapform',
 ]
 
 MIDDLEWARE = [
